@@ -10,7 +10,7 @@
 
 @implementation WeatherProvider
 
-- (void)temperatureByCardinalLocation:(NSDictionary *)cardinalLocation withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion {
+- (void)temperaturesWeatherObservationsWithCardinalLocation:(NSDictionary *)cardinalLocation withCompletion:(void(^)(NSArray *temperaturesWeatherObservations, NSError *error))completion {
     NSString *path = @"http://api.geonames.org/weatherJSON";
     NSMutableDictionary *paramsMutable = [NSMutableDictionary dictionaryWithDictionary:cardinalLocation];
     [paramsMutable setValue:@"demo" forKey:@"username"];
@@ -24,20 +24,32 @@
                 completion(nil, errorJSON);
             }
         }
-        NSArray *weathersArray = responseDictionary[@"weatherObservations"];
-        NSInteger temperatureTotal = 0;
+        
+        NSArray *weathersArray = objectFromDictionaryValue(responseDictionary[@"weatherObservations"]);
+        NSMutableArray *temperatures = [[NSMutableArray alloc] init];
         for (NSDictionary *weatherDictionary in weathersArray) {
-            temperatureTotal += [weatherDictionary[@"temperature"] integerValue];
+            [temperatures addObject:objectFromDictionaryValue(weatherDictionary[@"temperature"])];
         }
+        
         if (completion) {
-            float avgTemp = (float)temperatureTotal/(float)[weathersArray count];
-            completion(@(avgTemp), nil);
+            completion([temperatures mutableCopy], nil);
         }
     } error:^(id responseObject, NSError *error) {
         if (completion) {
             completion(nil, error);
         }
     }];
+}
+
+#pragma mark - Utils Methods
+static inline id objectFromDictionaryValue(id value) {
+    id returnVal;
+    if([value isEqual:[NSNull null]] || value == nil){
+        returnVal = nil;
+    } else {
+        returnVal = value;
+    }
+    return returnVal;
 }
 
 @end

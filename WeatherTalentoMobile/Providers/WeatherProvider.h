@@ -10,5 +10,6 @@
 
 @interface WeatherProvider : BaseProvider
 
-- (void)temperatureByCardinalLocation:(NSDictionary *)cardinalLocation withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion;
+- (void)temperaturesWeatherObservationsWithCardinalLocation:(NSDictionary *)cardinalLocation withCompletion:(void(^)(NSArray *temperaturesWeatherObservations, NSError *error))completion;
+
 @end

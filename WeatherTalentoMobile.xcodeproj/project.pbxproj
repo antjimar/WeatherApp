@@ -19,8 +19,14 @@
 		798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BAB1B7A73AD0010C02A /* HTTPRequestManager.m */; };
 		798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BAE1B7A76700010C02A /* LocationsProvider.m */; };
 		798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB11B7A78770010C02A /* HTTPSessionManager.m */; };
-		798C7BB71B7A7A2C0010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB61B7A7A2C0010C02A /* LocationEntity.m */; };
 		798C7BBA1B7A7FC00010C02A /* WeatherProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB91B7A7FC00010C02A /* WeatherProvider.m */; };
+		798C7BBD1B7A89C00010C02A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BBB1B7A89C00010C02A /* Model.xcdatamodeld */; };
+		798C7BC31B7A8B410010C02A /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BC21B7A8B410010C02A /* CoreDataStack.m */; };
+		798C7BCA1B7A8C960010C02A /* LocationEntity+Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BC91B7A8C960010C02A /* LocationEntity+Builder.m */; };
+		798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BCC1B7A90340010C02A /* SearchLocationInteractor.m */; };
+		798C7BD01B7A90FB0010C02A /* AverageTemperatureInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */; };
+		798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */; };
+		798C7BD61B7A97030010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD51B7A97030010C02A /* LocationEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +64,21 @@
 		798C7BAE1B7A76700010C02A /* LocationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationsProvider.m; path = Providers/LocationsProvider.m; sourceTree = "<group>"; };
 		798C7BB01B7A78770010C02A /* HTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPSessionManager.h; path = Connection/HTTPSessionManager.h; sourceTree = "<group>"; };
 		798C7BB11B7A78770010C02A /* HTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPSessionManager.m; path = Connection/HTTPSessionManager.m; sourceTree = "<group>"; };
-		798C7BB51B7A7A2C0010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
-		798C7BB61B7A7A2C0010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
 		798C7BB81B7A7FC00010C02A /* WeatherProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherProvider.h; path = Providers/WeatherProvider.h; sourceTree = "<group>"; };
 		798C7BB91B7A7FC00010C02A /* WeatherProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherProvider.m; path = Providers/WeatherProvider.m; sourceTree = "<group>"; };
+		798C7BBC1B7A89C00010C02A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		798C7BC11B7A8B410010C02A /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStack.h; path = Model/CoreDataStack.h; sourceTree = "<group>"; };
+		798C7BC21B7A8B410010C02A /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = Model/CoreDataStack.m; sourceTree = "<group>"; };
+		798C7BC81B7A8C960010C02A /* LocationEntity+Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationEntity+Builder.h"; path = "Model/LocationEntity+Builder.h"; sourceTree = "<group>"; };
+		798C7BC91B7A8C960010C02A /* LocationEntity+Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationEntity+Builder.m"; path = "Model/LocationEntity+Builder.m"; sourceTree = "<group>"; };
+		798C7BCB1B7A90340010C02A /* SearchLocationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchLocationInteractor.h; path = "Use Cases/SearchLocationInteractor.h"; sourceTree = "<group>"; };
+		798C7BCC1B7A90340010C02A /* SearchLocationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchLocationInteractor.m; path = "Use Cases/SearchLocationInteractor.m"; sourceTree = "<group>"; };
+		798C7BCE1B7A90FB0010C02A /* AverageTemperatureInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AverageTemperatureInteractor.h; path = "Use Cases/AverageTemperatureInteractor.h"; sourceTree = "<group>"; };
+		798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AverageTemperatureInteractor.m; path = "Use Cases/AverageTemperatureInteractor.m"; sourceTree = "<group>"; };
+		798C7BD11B7A93DB0010C02A /* NSManagedObject+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Weather.h"; path = "Model/NSManagedObject+Weather.h"; sourceTree = "<group>"; };
+		798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Weather.m"; path = "Model/NSManagedObject+Weather.m"; sourceTree = "<group>"; };
+		798C7BD41B7A97030010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
+		798C7BD51B7A97030010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +123,7 @@
 				798C7B7E1B7A6EAD0010C02A /* AppDelegate.h */,
 				798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */,
 				798C7BB31B7A7A130010C02A /* Model */,
-				798C7BA11B7A71560010C02A /* User Cases */,
+				798C7BA11B7A71560010C02A /* Use Cases */,
 				798C7BA01B7A71470010C02A /* Providers */,
 				798C7BA21B7A71650010C02A /* Connection */,
 				798C7B811B7A6EAD0010C02A /* ViewController.h */,
@@ -158,11 +175,15 @@
 			name = Providers;
 			sourceTree = "<group>";
 		};
-		798C7BA11B7A71560010C02A /* User Cases */ = {
+		798C7BA11B7A71560010C02A /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				798C7BCB1B7A90340010C02A /* SearchLocationInteractor.h */,
+				798C7BCC1B7A90340010C02A /* SearchLocationInteractor.m */,
+				798C7BCE1B7A90FB0010C02A /* AverageTemperatureInteractor.h */,
+				798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */,
 			);
-			name = "User Cases";
+			name = "Use Cases";
 			sourceTree = "<group>";
 		};
 		798C7BA21B7A71650010C02A /* Connection */ = {
@@ -182,10 +203,49 @@
 		798C7BB31B7A7A130010C02A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				798C7BB51B7A7A2C0010C02A /* LocationEntity.h */,
-				798C7BB61B7A7A2C0010C02A /* LocationEntity.m */,
+				798C7BC41B7A8B4C0010C02A /* DataModel */,
+				798C7BC51B7A8B560010C02A /* CoreDataStack */,
+				798C7BC61B7A8B670010C02A /* Entities */,
+				798C7BC71B7A8B710010C02A /* Categories */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		798C7BC41B7A8B4C0010C02A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BBB1B7A89C00010C02A /* Model.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		798C7BC51B7A8B560010C02A /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BC11B7A8B410010C02A /* CoreDataStack.h */,
+				798C7BC21B7A8B410010C02A /* CoreDataStack.m */,
+			);
+			name = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		798C7BC61B7A8B670010C02A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BD41B7A97030010C02A /* LocationEntity.h */,
+				798C7BD51B7A97030010C02A /* LocationEntity.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		798C7BC71B7A8B710010C02A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BC81B7A8C960010C02A /* LocationEntity+Builder.h */,
+				798C7BC91B7A8C960010C02A /* LocationEntity+Builder.m */,
+				798C7BD11B7A93DB0010C02A /* NSManagedObject+Weather.h */,
+				798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,16 +348,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798C7BB71B7A7A2C0010C02A /* LocationEntity.m in Sources */,
 				798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */,
+				798C7BD61B7A97030010C02A /* LocationEntity.m in Sources */,
+				798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */,
 				798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */,
 				798C7BA91B7A73640010C02A /* RequestManagerFactory.m in Sources */,
+				798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */,
 				798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */,
 				798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */,
 				798C7B7D1B7A6EAD0010C02A /* main.m in Sources */,
 				798C7BBA1B7A7FC00010C02A /* WeatherProvider.m in Sources */,
 				798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */,
+				798C7BD01B7A90FB0010C02A /* AverageTemperatureInteractor.m in Sources */,
+				798C7BCA1B7A8C960010C02A /* LocationEntity+Builder.m in Sources */,
+				798C7BBD1B7A89C00010C02A /* Model.xcdatamodeld in Sources */,
 				798C7BA51B7A71BE0010C02A /* BaseProvider.m in Sources */,
+				798C7BC31B7A8B410010C02A /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +568,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		798C7BBB1B7A89C00010C02A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				798C7BBC1B7A89C00010C02A /* Model.xcdatamodel */,
+			);
+			currentVersion = 798C7BBC1B7A89C00010C02A /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Model/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 798C7B6F1B7A6EAD0010C02A /* Project object */;
 }

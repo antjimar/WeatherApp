@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface LocationEntity : NSObject
 
-@property (copy, nonatomic) NSString *locationEntityName;
-@property (strong, nonatomic) NSNumber *locationEntityEastPoint;
-@property (strong, nonatomic) NSNumber *locationEntitySouthPoint;
-@property (strong, nonatomic) NSNumber *locationEntityNorthPoint;
-@property (strong, nonatomic) NSNumber *locationEntityWestPoint;
+@interface LocationEntity : NSManagedObject
 
-+ (instancetype)parseLocationByDictionary:(NSDictionary *)data;
+@property (nonatomic, retain) NSString * locationEntityName;
+@property (nonatomic, retain) NSNumber * locationEntityEastPoint;
+@property (nonatomic, retain) NSNumber * locationEntitySouthPoint;
+@property (nonatomic, retain) NSNumber * locationEntityNorthPoint;
+@property (nonatomic, retain) NSNumber * locationEntityWestPoint;
+@property (nonatomic, retain) NSDate * locationEnitySelectedDate;
+@property (nonatomic, retain) NSNumber * locationEntityLatitude;
+@property (nonatomic, retain) NSNumber * locationEntityLongitude;
 
 @end

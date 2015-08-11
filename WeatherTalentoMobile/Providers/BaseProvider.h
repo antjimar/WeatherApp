@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #import "RequestManager.h"
 
 @interface BaseProvider : NSObject
 
 @property (strong, nonatomic) id<RequestManager> requestManager;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *writeManagedObjectContext;
 
 @end

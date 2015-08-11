@@ -8,27 +8,16 @@
 
 #import "LocationEntity.h"
 
+
 @implementation LocationEntity
 
-+ (instancetype)parseLocationByDictionary:(NSDictionary *)data {
-    LocationEntity *locationEntity = [[LocationEntity alloc] init];
-    locationEntity.locationEntityName = objectFromDictionaryValue(data[@"name"]);
-    locationEntity.locationEntityEastPoint = @([objectFromDictionaryValue(data[@"east"]) doubleValue]);
-    locationEntity.locationEntitySouthPoint = @([objectFromDictionaryValue(data[@"south"]) doubleValue]);
-    locationEntity.locationEntityNorthPoint = @([objectFromDictionaryValue(data[@"north"]) doubleValue]);
-    locationEntity.locationEntityWestPoint = @([objectFromDictionaryValue(data[@"west"]) doubleValue]);
-    return locationEntity;
-}
-
-#pragma mark - Utils Methods
-static inline id objectFromDictionaryValue(id value) {
-    id returnVal;
-    if([value isEqual:[NSNull null]] || value == nil){
-        returnVal = nil;
-    } else {
-        returnVal = value;
-    }
-    return returnVal;
-}
+@dynamic locationEntityName;
+@dynamic locationEntityEastPoint;
+@dynamic locationEntitySouthPoint;
+@dynamic locationEntityNorthPoint;
+@dynamic locationEntityWestPoint;
+@dynamic locationEnitySelectedDate;
+@dynamic locationEntityLatitude;
+@dynamic locationEntityLongitude;
 
 @end
