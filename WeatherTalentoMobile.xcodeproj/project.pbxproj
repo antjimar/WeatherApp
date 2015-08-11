@@ -14,6 +14,12 @@
 		798C7B881B7A6EAD0010C02A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B871B7A6EAD0010C02A /* Images.xcassets */; };
 		798C7B8B1B7A6EAD0010C02A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B891B7A6EAD0010C02A /* LaunchScreen.xib */; };
 		798C7B971B7A6EAD0010C02A /* WeatherTalentoMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B961B7A6EAD0010C02A /* WeatherTalentoMobileTests.m */; };
+		798C7BA51B7A71BE0010C02A /* BaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BA41B7A71BE0010C02A /* BaseProvider.m */; };
+		798C7BA91B7A73640010C02A /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BA81B7A73640010C02A /* RequestManagerFactory.m */; };
+		798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BAB1B7A73AD0010C02A /* HTTPRequestManager.m */; };
+		798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BAE1B7A76700010C02A /* LocationsProvider.m */; };
+		798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB11B7A78770010C02A /* HTTPSessionManager.m */; };
+		798C7BB71B7A7A2C0010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB61B7A7A2C0010C02A /* LocationEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,19 @@
 		798C7B901B7A6EAD0010C02A /* WeatherTalentoMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTalentoMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		798C7B951B7A6EAD0010C02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798C7B961B7A6EAD0010C02A /* WeatherTalentoMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTalentoMobileTests.m; sourceTree = "<group>"; };
+		798C7BA31B7A71BE0010C02A /* BaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseProvider.h; path = Providers/BaseProvider.h; sourceTree = "<group>"; };
+		798C7BA41B7A71BE0010C02A /* BaseProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseProvider.m; path = Providers/BaseProvider.m; sourceTree = "<group>"; };
+		798C7BA61B7A71FF0010C02A /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = Connection/RequestManager.h; sourceTree = "<group>"; };
+		798C7BA71B7A73640010C02A /* RequestManagerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManagerFactory.h; path = Connection/RequestManagerFactory.h; sourceTree = "<group>"; };
+		798C7BA81B7A73640010C02A /* RequestManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManagerFactory.m; path = Connection/RequestManagerFactory.m; sourceTree = "<group>"; };
+		798C7BAA1B7A73AD0010C02A /* HTTPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPRequestManager.h; path = Connection/HTTPRequestManager.h; sourceTree = "<group>"; };
+		798C7BAB1B7A73AD0010C02A /* HTTPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPRequestManager.m; path = Connection/HTTPRequestManager.m; sourceTree = "<group>"; };
+		798C7BAD1B7A76700010C02A /* LocationsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationsProvider.h; path = Providers/LocationsProvider.h; sourceTree = "<group>"; };
+		798C7BAE1B7A76700010C02A /* LocationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationsProvider.m; path = Providers/LocationsProvider.m; sourceTree = "<group>"; };
+		798C7BB01B7A78770010C02A /* HTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPSessionManager.h; path = Connection/HTTPSessionManager.h; sourceTree = "<group>"; };
+		798C7BB11B7A78770010C02A /* HTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPSessionManager.m; path = Connection/HTTPSessionManager.m; sourceTree = "<group>"; };
+		798C7BB51B7A7A2C0010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
+		798C7BB61B7A7A2C0010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +102,10 @@
 			children = (
 				798C7B7E1B7A6EAD0010C02A /* AppDelegate.h */,
 				798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */,
+				798C7BB31B7A7A130010C02A /* Model */,
+				798C7BA11B7A71560010C02A /* User Cases */,
+				798C7BA01B7A71470010C02A /* Providers */,
+				798C7BA21B7A71650010C02A /* Connection */,
 				798C7B811B7A6EAD0010C02A /* ViewController.h */,
 				798C7B821B7A6EAD0010C02A /* ViewController.m */,
 				798C7B841B7A6EAD0010C02A /* Main.storyboard */,
@@ -117,6 +140,47 @@
 				798C7B951B7A6EAD0010C02A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		798C7BA01B7A71470010C02A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BA31B7A71BE0010C02A /* BaseProvider.h */,
+				798C7BA41B7A71BE0010C02A /* BaseProvider.m */,
+				798C7BAD1B7A76700010C02A /* LocationsProvider.h */,
+				798C7BAE1B7A76700010C02A /* LocationsProvider.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		798C7BA11B7A71560010C02A /* User Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "User Cases";
+			sourceTree = "<group>";
+		};
+		798C7BA21B7A71650010C02A /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BB01B7A78770010C02A /* HTTPSessionManager.h */,
+				798C7BB11B7A78770010C02A /* HTTPSessionManager.m */,
+				798C7BA61B7A71FF0010C02A /* RequestManager.h */,
+				798C7BA71B7A73640010C02A /* RequestManagerFactory.h */,
+				798C7BA81B7A73640010C02A /* RequestManagerFactory.m */,
+				798C7BAA1B7A73AD0010C02A /* HTTPRequestManager.h */,
+				798C7BAB1B7A73AD0010C02A /* HTTPRequestManager.m */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		798C7BB31B7A7A130010C02A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				798C7BB51B7A7A2C0010C02A /* LocationEntity.h */,
+				798C7BB61B7A7A2C0010C02A /* LocationEntity.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798C7BB71B7A7A2C0010C02A /* LocationEntity.m in Sources */,
+				798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */,
 				798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */,
+				798C7BA91B7A73640010C02A /* RequestManagerFactory.m in Sources */,
 				798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */,
+				798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */,
 				798C7B7D1B7A6EAD0010C02A /* main.m in Sources */,
+				798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */,
+				798C7BA51B7A71BE0010C02A /* BaseProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
