@@ -20,6 +20,7 @@
 		798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BAE1B7A76700010C02A /* LocationsProvider.m */; };
 		798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB11B7A78770010C02A /* HTTPSessionManager.m */; };
 		798C7BB71B7A7A2C0010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB61B7A7A2C0010C02A /* LocationEntity.m */; };
+		798C7BBA1B7A7FC00010C02A /* WeatherProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BB91B7A7FC00010C02A /* WeatherProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		798C7BB11B7A78770010C02A /* HTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPSessionManager.m; path = Connection/HTTPSessionManager.m; sourceTree = "<group>"; };
 		798C7BB51B7A7A2C0010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
 		798C7BB61B7A7A2C0010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
+		798C7BB81B7A7FC00010C02A /* WeatherProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherProvider.h; path = Providers/WeatherProvider.h; sourceTree = "<group>"; };
+		798C7BB91B7A7FC00010C02A /* WeatherProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherProvider.m; path = Providers/WeatherProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				798C7BA41B7A71BE0010C02A /* BaseProvider.m */,
 				798C7BAD1B7A76700010C02A /* LocationsProvider.h */,
 				798C7BAE1B7A76700010C02A /* LocationsProvider.m */,
+				798C7BB81B7A7FC00010C02A /* WeatherProvider.h */,
+				798C7BB91B7A7FC00010C02A /* WeatherProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */,
 				798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */,
 				798C7B7D1B7A6EAD0010C02A /* main.m in Sources */,
+				798C7BBA1B7A7FC00010C02A /* WeatherProvider.m in Sources */,
 				798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */,
 				798C7BA51B7A71BE0010C02A /* BaseProvider.m in Sources */,
 			);

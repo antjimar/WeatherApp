@@ -39,7 +39,9 @@
             completion(locationsArray, nil);
         }
     } error:^(id responseObject, NSError *error) {
-        completion(nil, error);
+        if (completion) {
+            completion(nil, error);
+        }
     }];
 }
 
