@@ -40,6 +40,7 @@
     }
 }
 
+#pragma mark - Private Methods
 - (BOOL)locationHasCardinalLocation:(LocationEntity *)locationEntity {
     if (locationEntity.locationEntityEastPoint == 0
         && locationEntity.locationEntityWestPoint == 0
