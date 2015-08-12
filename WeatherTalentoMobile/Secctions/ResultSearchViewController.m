@@ -1,22 +1,22 @@
 //
-//  SearchViewController.m
+//  ResultSearchViewController.m
 //  WeatherTalentoMobile
 //
-//  Created by ANTONIO JIMÉNEZ MARTÍNEZ on 11/08/15.
+//  Created by ANTONIO JIMÉNEZ MARTÍNEZ on 12/08/15.
 //  Copyright (c) 2015 TalentoMobile. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "ResultSearchViewController.h"
 
-@interface SearchViewController ()
+@interface ResultSearchViewController ()
 
 @end
 
-@implementation SearchViewController
+@implementation ResultSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

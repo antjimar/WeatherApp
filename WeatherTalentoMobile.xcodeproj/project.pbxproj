@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		798C7B7D1B7A6EAD0010C02A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B7C1B7A6EAD0010C02A /* main.m */; };
 		798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */; };
-		798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B821B7A6EAD0010C02A /* ViewController.m */; };
 		798C7B881B7A6EAD0010C02A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B871B7A6EAD0010C02A /* Images.xcassets */; };
 		798C7B8B1B7A6EAD0010C02A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B891B7A6EAD0010C02A /* LaunchScreen.xib */; };
 		798C7B971B7A6EAD0010C02A /* WeatherTalentoMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B961B7A6EAD0010C02A /* WeatherTalentoMobileTests.m */; };
@@ -25,11 +24,18 @@
 		798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BCC1B7A90340010C02A /* SearchLocationInteractor.m */; };
 		798C7BD01B7A90FB0010C02A /* AverageTemperatureInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */; };
 		798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */; };
-		798C7BDA1B7A9D850010C02A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD91B7A9D850010C02A /* SearchViewController.m */; };
 		798C7BDD1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BDC1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m */; };
 		798C7BF81B7B1C830010C02A /* LocationSelectedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BF71B7B1C830010C02A /* LocationSelectedEntity.m */; };
 		798C7BFB1B7B1C830010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BFA1B7B1C830010C02A /* LocationEntity.m */; };
 		798C7BFE1B7BAEA30010C02A /* SaveLocationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BFD1B7BAEA30010C02A /* SaveLocationInteractor.m */; };
+		798C7C2F1B7BB0900010C02A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7C2D1B7BB0900010C02A /* MainViewController.m */; };
+		798C7C301B7BB0900010C02A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7C2E1B7BB0900010C02A /* MainViewController.xib */; };
+		798C7C341B7BB0A60010C02A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7C321B7BB0A60010C02A /* SearchViewController.m */; };
+		798C7C351B7BB0A60010C02A /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7C331B7BB0A60010C02A /* SearchViewController.xib */; };
+		798C7C391B7BB0BF0010C02A /* ResultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7C371B7BB0BF0010C02A /* ResultSearchViewController.m */; };
+		798C7C3A1B7BB0BF0010C02A /* ResultSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7C381B7BB0BF0010C02A /* ResultSearchViewController.xib */; };
+		798C7C3E1B7BB0E20010C02A /* TemperatureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7C3C1B7BB0E20010C02A /* TemperatureDetailViewController.m */; };
+		798C7C3F1B7BB0E20010C02A /* TemperatureDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7C3D1B7BB0E20010C02A /* TemperatureDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +54,6 @@
 		798C7B7C1B7A6EAD0010C02A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		798C7B7E1B7A6EAD0010C02A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		798C7B811B7A6EAD0010C02A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		798C7B821B7A6EAD0010C02A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		798C7B871B7A6EAD0010C02A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		798C7B8A1B7A6EAD0010C02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		798C7B901B7A6EAD0010C02A /* WeatherTalentoMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTalentoMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +83,6 @@
 		798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AverageTemperatureInteractor.m; path = "Use Cases/AverageTemperatureInteractor.m"; sourceTree = "<group>"; };
 		798C7BD11B7A93DB0010C02A /* NSManagedObject+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Weather.h"; path = "Model/NSManagedObject+Weather.h"; sourceTree = "<group>"; };
 		798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Weather.m"; path = "Model/NSManagedObject+Weather.m"; sourceTree = "<group>"; };
-		798C7BD81B7A9D850010C02A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		798C7BD91B7A9D850010C02A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		798C7BDB1B7B15B50010C02A /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+ActiveRecord.h"; path = "Model/NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
 		798C7BDC1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+ActiveRecord.m"; path = "Model/NSManagedObject+ActiveRecord.m"; sourceTree = "<group>"; };
 		798C7BF61B7B1C830010C02A /* LocationSelectedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSelectedEntity.h; path = Model/LocationSelectedEntity.h; sourceTree = "<group>"; };
@@ -89,6 +91,18 @@
 		798C7BFA1B7B1C830010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
 		798C7BFC1B7BAEA30010C02A /* SaveLocationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaveLocationInteractor.h; path = "Use Cases/SaveLocationInteractor.h"; sourceTree = "<group>"; };
 		798C7BFD1B7BAEA30010C02A /* SaveLocationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaveLocationInteractor.m; path = "Use Cases/SaveLocationInteractor.m"; sourceTree = "<group>"; };
+		798C7C2C1B7BB0900010C02A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Secctions/MainViewController.h; sourceTree = "<group>"; };
+		798C7C2D1B7BB0900010C02A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Secctions/MainViewController.m; sourceTree = "<group>"; };
+		798C7C2E1B7BB0900010C02A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Secctions/MainViewController.xib; sourceTree = "<group>"; };
+		798C7C311B7BB0A60010C02A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = Secctions/SearchViewController.h; sourceTree = "<group>"; };
+		798C7C321B7BB0A60010C02A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = Secctions/SearchViewController.m; sourceTree = "<group>"; };
+		798C7C331B7BB0A60010C02A /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Secctions/SearchViewController.xib; sourceTree = "<group>"; };
+		798C7C361B7BB0BF0010C02A /* ResultSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultSearchViewController.h; path = Secctions/ResultSearchViewController.h; sourceTree = "<group>"; };
+		798C7C371B7BB0BF0010C02A /* ResultSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultSearchViewController.m; path = Secctions/ResultSearchViewController.m; sourceTree = "<group>"; };
+		798C7C381B7BB0BF0010C02A /* ResultSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultSearchViewController.xib; path = Secctions/ResultSearchViewController.xib; sourceTree = "<group>"; };
+		798C7C3B1B7BB0E20010C02A /* TemperatureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureDetailViewController.h; path = Secctions/TemperatureDetailViewController.h; sourceTree = "<group>"; };
+		798C7C3C1B7BB0E20010C02A /* TemperatureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureDetailViewController.m; path = Secctions/TemperatureDetailViewController.m; sourceTree = "<group>"; };
+		798C7C3D1B7BB0E20010C02A /* TemperatureDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TemperatureDetailViewController.xib; path = Secctions/TemperatureDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +146,7 @@
 			children = (
 				798C7B7E1B7A6EAD0010C02A /* AppDelegate.h */,
 				798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */,
-				798C7B811B7A6EAD0010C02A /* ViewController.h */,
-				798C7B821B7A6EAD0010C02A /* ViewController.m */,
-				798C7BD81B7A9D850010C02A /* SearchViewController.h */,
-				798C7BD91B7A9D850010C02A /* SearchViewController.m */,
+				798C7C2B1B7BB0610010C02A /* Secctions */,
 				798C7BB31B7A7A130010C02A /* Model */,
 				798C7BA11B7A71560010C02A /* Use Cases */,
 				798C7BA01B7A71470010C02A /* Providers */,
@@ -265,6 +276,25 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		798C7C2B1B7BB0610010C02A /* Secctions */ = {
+			isa = PBXGroup;
+			children = (
+				798C7C2C1B7BB0900010C02A /* MainViewController.h */,
+				798C7C2D1B7BB0900010C02A /* MainViewController.m */,
+				798C7C2E1B7BB0900010C02A /* MainViewController.xib */,
+				798C7C311B7BB0A60010C02A /* SearchViewController.h */,
+				798C7C321B7BB0A60010C02A /* SearchViewController.m */,
+				798C7C331B7BB0A60010C02A /* SearchViewController.xib */,
+				798C7C361B7BB0BF0010C02A /* ResultSearchViewController.h */,
+				798C7C371B7BB0BF0010C02A /* ResultSearchViewController.m */,
+				798C7C381B7BB0BF0010C02A /* ResultSearchViewController.xib */,
+				798C7C3B1B7BB0E20010C02A /* TemperatureDetailViewController.h */,
+				798C7C3C1B7BB0E20010C02A /* TemperatureDetailViewController.m */,
+				798C7C3D1B7BB0E20010C02A /* TemperatureDetailViewController.xib */,
+			);
+			name = Secctions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,7 +375,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798C7C3F1B7BB0E20010C02A /* TemperatureDetailViewController.xib in Resources */,
+				798C7C3A1B7BB0BF0010C02A /* ResultSearchViewController.xib in Resources */,
 				798C7B8B1B7A6EAD0010C02A /* LaunchScreen.xib in Resources */,
+				798C7C301B7BB0900010C02A /* MainViewController.xib in Resources */,
+				798C7C351B7BB0A60010C02A /* SearchViewController.xib in Resources */,
 				798C7B881B7A6EAD0010C02A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,12 +400,12 @@
 			files = (
 				798C7BFB1B7B1C830010C02A /* LocationEntity.m in Sources */,
 				798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */,
+				798C7C341B7BB0A60010C02A /* SearchViewController.m in Sources */,
 				798C7BF81B7B1C830010C02A /* LocationSelectedEntity.m in Sources */,
 				798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */,
-				798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */,
 				798C7BA91B7A73640010C02A /* RequestManagerFactory.m in Sources */,
 				798C7BFE1B7BAEA30010C02A /* SaveLocationInteractor.m in Sources */,
-				798C7BDA1B7A9D850010C02A /* SearchViewController.m in Sources */,
+				798C7C2F1B7BB0900010C02A /* MainViewController.m in Sources */,
 				798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */,
 				798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */,
 				798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */,
@@ -379,6 +413,8 @@
 				798C7BBA1B7A7FC00010C02A /* WeatherProvider.m in Sources */,
 				798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */,
 				798C7BD01B7A90FB0010C02A /* AverageTemperatureInteractor.m in Sources */,
+				798C7C391B7BB0BF0010C02A /* ResultSearchViewController.m in Sources */,
+				798C7C3E1B7BB0E20010C02A /* TemperatureDetailViewController.m in Sources */,
 				798C7BCA1B7A8C960010C02A /* LocationEntity+Builder.m in Sources */,
 				798C7BDD1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m in Sources */,
 				798C7BBD1B7A89C00010C02A /* Model.xcdatamodeld in Sources */,
