@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class LocationEntity, LocationsProvider;
+@class LocationEntity, LocationsProvider, LocationSelectedEntity;
 
 @interface SaveLocationInteractor : NSObject
 @property (strong, nonatomic) LocationsProvider *locationsProvider;
-- (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(NSError *error))completion;
+- (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(LocationSelectedEntity *locationSelectedEntity,NSError *error))completion;
 @end

@@ -28,4 +28,11 @@
     [super viewDidLoad];
 }
 
+#pragma mark - Actions Methods
+- (IBAction)closeTemperatureDetail:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
 @end

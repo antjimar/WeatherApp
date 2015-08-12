@@ -56,7 +56,8 @@ static NSString * const kCellIdentifier = @"mainCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LocationSelectedEntity *locationSelectedEntity = [self locationSelectedEnityAtIndexPath:indexPath];
     TemperatureDetailViewController *temperatureDetailViewController = [[TemperatureDetailViewController alloc] initWithModel:locationSelectedEntity];
-    [self.navigationController pushViewController:temperatureDetailViewController animated:YES];
+    [self presentViewController:temperatureDetailViewController animated:YES completion:^{
+    }];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate

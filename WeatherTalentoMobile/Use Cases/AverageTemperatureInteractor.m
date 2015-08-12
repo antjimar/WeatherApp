@@ -13,7 +13,6 @@
 @implementation AverageTemperatureInteractor
 
 - (void)averageTemperaturesWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion {
-    
     if ([self locationHasCardinalLocation:locationEntity]) {
         NSDictionary *cardinalLocation = @{
                                            @"north": locationEntity.locationEntityNorthPoint,

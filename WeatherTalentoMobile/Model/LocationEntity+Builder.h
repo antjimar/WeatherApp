@@ -8,6 +8,8 @@
 
 #import "LocationEntity.h"
 
+@class LocationSelectedEntity;
+
 @interface LocationEntity (Builder)
 
 + (instancetype)parseLocationByDictionary:(NSDictionary *)data queryName:(NSString *)queryName inManageObjectContext:(NSManagedObjectContext *)context;

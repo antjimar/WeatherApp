@@ -13,5 +13,4 @@
 @interface TemperatureDetailViewController : UIViewController
 
 - (instancetype)initWithModel:(LocationSelectedEntity *)locationSelectedEntity;
-
 @end

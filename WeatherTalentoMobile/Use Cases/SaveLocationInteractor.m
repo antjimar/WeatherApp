@@ -9,19 +9,19 @@
 #import "SaveLocationInteractor.h"
 #import "LocationsProvider.h"
 #import "LocationEntity.h"
+#import "LocationSelectedEntity.h"
 
 @implementation SaveLocationInteractor
 
-- (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(NSError *error))completion {
-    
+- (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(LocationSelectedEntity *locationSelectedEntity, NSError *error))completion {
     [self.locationsProvider saveLocationSelectedWithLocationEntity:locationEntity withCompletion:^(LocationSelectedEntity *locationSelectedEntity, NSError *error) {
         if (error) {
             if (completion) {
-                completion(error);
+                completion(nil, error);
             }
         } else {
             if (completion) {
-                completion(nil);
+                completion(locationSelectedEntity, nil);
             }
         }
     }];
