@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LocationSelectedEntity;
+
 @interface TemperatureDetailViewController : UIViewController
+
+- (instancetype)initWithModel:(LocationSelectedEntity *)locationSelectedEntity;
 
 @end

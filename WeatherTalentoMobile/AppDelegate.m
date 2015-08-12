@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,36 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    
-    
-    
-    
-    
-    
-    
+    MainViewController *mainViewController = [[MainViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    [self.window setRootViewController:navigationController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    [self customiseAppeareance];
-//    self.coreDataStack = [[CoreDataStack alloc] initWithModelName:kModelName];
-//    
-//    UICollectionViewFlowLayout *layout = [self setupLayout];
-//    NSFetchedResultsController *results = [self setupNSFetchResultsController];
-//    
-//    MainPictureViewController *mainViewController = [[MainPictureViewController alloc] initWithFetchedResultsController:results
-//                                                                                                                 layout:layout
-//                                                                                                           andIndicator:nil];
-//    mainViewController.coreDataStack = self.coreDataStack;
-//    UINavigationController *navigatinoVC = [[UINavigationController alloc] initWithRootViewController:mainViewController];
-//    [self.window setRootViewController:navigatinoVC];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
-    
-    
-    
-    
     return YES;
 }
 

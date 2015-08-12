@@ -7,12 +7,22 @@
 //
 
 #import "TemperatureDetailViewController.h"
+#import "LocationSelectedEntity.h"
 
 @interface TemperatureDetailViewController ()
-
+@property (strong, nonatomic) LocationSelectedEntity *locationSelectedEntity;
 @end
 
 @implementation TemperatureDetailViewController
+
+- (instancetype)initWithModel:(LocationSelectedEntity *)locationSelectedEntity {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _locationSelectedEntity = locationSelectedEntity;
+        self.title = [NSString stringWithFormat:@"Temperatura de: %@", locationSelectedEntity.locationEntityName];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
