@@ -15,6 +15,7 @@
 static NSString * const kCellIdentifier = @"resultCell";
 
 @interface ResultSearchViewController ()<UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, copy) NSString *searchQuery;
 @property (nonatomic, strong) SearchLocationInteractor *searchLocationInteractor;
 @property (nonatomic, strong) SaveLocationInteractor *saveLocationInteractor;
@@ -55,7 +56,6 @@ static NSString * const kCellIdentifier = @"resultCell";
 #pragma mark - UITableViewDelegate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LocationEntity *locationEntity = [self.resultLocations objectAtIndex:indexPath.row];
-    // Guardamos en core data la localización selecionada
     __weak typeof(self) weakSelf = self;
     [self.saveLocationInteractor saveLocationSelectedWithLocationEntity:locationEntity withCompletion:^(LocationSelectedEntity *locationSelectedEntity, NSError *error) {
         __strong typeof(weakSelf) self = weakSelf;
@@ -66,7 +66,6 @@ static NSString * const kCellIdentifier = @"resultCell";
         }
     }];
 }
-
 - (void)navigateToTemperatureDetailWithLocationSelected:(LocationSelectedEntity *)locationSelectedEntity {
     TemperatureDetailViewController *temperatureDetailViewController = [[TemperatureDetailViewController alloc] initWithModel:locationSelectedEntity];
     [self presentViewController:temperatureDetailViewController animated:YES completion:^{

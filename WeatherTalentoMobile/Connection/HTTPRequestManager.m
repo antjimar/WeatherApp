@@ -17,7 +17,6 @@
 
 #pragma mark - HTTP Methods
 - (void)GET:(NSString *)strinURL parameters:(NSDictionary *)parameters completion:(void (^)(id responseObject))successBlock error:(void (^)(id, NSError *error))errorBlock {
-    
     [self showNetworkActivityIndicator];
     
     NSURL *url = [NSURL URLWithString:strinURL];
@@ -56,7 +55,7 @@
     return _httpSessionManager;
 }
 
-#pragma mark - private Methods
+#pragma mark - Private Methods
 - (NSURL *)NSURL:(NSURL *)URL byAppendingQueryParameters:(NSDictionary *)parameters {
     NSString* URLString = [NSString stringWithFormat:@"%@?%@", [URL absoluteString], [self stringFromQueryParameters:parameters]];
     return [NSURL URLWithString:URLString];

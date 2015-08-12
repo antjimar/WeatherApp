@@ -13,5 +13,4 @@
 @interface SearchLocationInteractor : NSObject
 @property (strong, nonatomic) LocationsProvider *locationsProvider;
 - (void)searchLocationByName:(NSString *)locationName withCompletion:(void(^)(NSArray *array, NSError *error))completion;
-
 @end

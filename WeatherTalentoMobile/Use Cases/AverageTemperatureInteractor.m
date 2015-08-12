@@ -8,27 +8,41 @@
 
 #import "AverageTemperatureInteractor.h"
 #import "WeatherProvider.h"
-#import "LocationEntity.h"
+#import "LocationSelectedEntity.h"
 
 @implementation AverageTemperatureInteractor
 
-- (void)averageTemperaturesWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion {
-    if ([self locationHasCardinalLocation:locationEntity]) {
+- (void)averageTemperaturesWithLocationEntity:(LocationSelectedEntity *)locationSelectedEntity withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion {
+    if ([self locationHasCardinalLocation:locationSelectedEntity]) {
         NSDictionary *cardinalLocation = @{
-                                           @"north": locationEntity.locationEntityNorthPoint,
-                                           @"south": locationEntity.locationEntitySouthPoint,
-                                           @"east": locationEntity.locationEntityEastPoint,
-                                           @"west": locationEntity.locationEntityWestPoint
+                                           @"north": [NSString stringWithFormat:@"%@", locationSelectedEntity.locationEntityNorthPoint],
+                                           @"south": [NSString stringWithFormat:@"%@", locationSelectedEntity.locationEntitySouthPoint],
+                                           @"east": [NSString stringWithFormat:@"%@", locationSelectedEntity.locationEntityEastPoint],
+                                           @"west": [NSString stringWithFormat:@"%@", locationSelectedEntity.locationEntityWestPoint]
                                            };
         
         [self.weatherProvider temperaturesWeatherObservationsWithCardinalLocation:cardinalLocation withCompletion:^(NSArray *temperaturesWeatherObservations, NSError *error) {
-            float temperatureTotal = 0;
-            for (NSString *tempString in temperaturesWeatherObservations) {
-                temperatureTotal += [tempString floatValue];
-            }
-            if (completion) {
-                float avgTemp = (float)temperatureTotal/(float)[temperaturesWeatherObservations count];
-                completion(@(avgTemp), nil);
+            if (!error) {
+                float temperatureTotal = 0;
+                int temperatureNumber = 0;
+                for (NSString *tempString in temperaturesWeatherObservations) {
+                    temperatureTotal += [tempString floatValue];
+                    temperatureNumber++;
+                }
+                if (completion) {
+                    if ([temperaturesWeatherObservations count] > 0) {
+                        float avgTemp = (float)temperatureTotal/(float)temperatureNumber;
+                        completion(@(avgTemp), nil);
+                    } else {
+                        NSError *errorTempCount = [NSError errorWithDomain:@"weatherApp" code:991 userInfo:nil];
+                        completion(nil, errorTempCount);
+                    }
+
+                }
+            } else {
+                if (completion) {
+                    completion(nil, error);
+                }
             }
         }];
     } else {
@@ -40,14 +54,22 @@
 }
 
 #pragma mark - Private Methods
-- (BOOL)locationHasCardinalLocation:(LocationEntity *)locationEntity {
-    if (locationEntity.locationEntityEastPoint == 0
-        && locationEntity.locationEntityWestPoint == 0
-        && locationEntity.locationEntityNorthPoint == 0
-        && locationEntity.locationEntitySouthPoint == 0) {
+- (BOOL)locationHasCardinalLocation:(LocationSelectedEntity *)locationSelectedEntity {
+    if (locationSelectedEntity.locationEntityEastPoint == 0
+        && locationSelectedEntity.locationEntityWestPoint == 0
+        && locationSelectedEntity.locationEntityNorthPoint == 0
+        && locationSelectedEntity.locationEntitySouthPoint == 0) {
         return NO;
     }
     return YES;
+}
+
+#pragma mark - Getters Methods
+- (WeatherProvider *)weatherProvider {
+    if (!_weatherProvider) {
+        _weatherProvider = [[WeatherProvider alloc] init];
+    }
+    return _weatherProvider;
 }
 
 @end

@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class WeatherProvider, LocationEntity;
+@class WeatherProvider, LocationSelectedEntity;
 
 @interface AverageTemperatureInteractor : NSObject
 
 @property (strong, nonatomic) WeatherProvider *weatherProvider;
-- (void)averageTemperaturesWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion;
+- (void)averageTemperaturesWithLocationEntity:(LocationSelectedEntity *)locationSelectedEntity withCompletion:(void(^)(NSNumber *averageTemperature, NSError *error))completion;
 @end

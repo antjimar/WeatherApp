@@ -30,7 +30,6 @@
 #pragma mark - Actions Methods
 - (IBAction)searchLocations:(UIButton *)sender {
     if ([self shouldSearch]) {
-        // Search
         ResultSearchViewController *resultSearchViewController = [[ResultSearchViewController alloc] initWithSearchQuery:self.searchTextField.text];
         [self.navigationController pushViewController:resultSearchViewController animated:YES];
     } else {
