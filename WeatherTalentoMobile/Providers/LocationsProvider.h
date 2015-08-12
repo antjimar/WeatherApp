@@ -8,8 +8,11 @@
 
 #import "BaseProvider.h"
 
+@class LocationEntity, LocationSelectedEntity;
+
 @interface LocationsProvider : BaseProvider
 
 - (void)searchLocationByName:(NSString *)locationName withCompletion:(void(^)(NSArray *locations, NSError *error))completion;
+- (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(LocationSelectedEntity *locationSelectedEntity, NSError *error))completion;
 
 @end

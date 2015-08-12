@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES">
-        <attribute name="locationEnitySelectedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="locationEntityEastPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationEntityLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationEntityLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationEntityName" attributeType="String" syncable="YES"/>
+        <attribute name="locationEntityNorthPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationEntityQuery" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationEntitySouthPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationEntityWestPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="LocationSelectedEntity" representedClassName="LocationSelectedEntity" syncable="YES">
         <attribute name="locationEntityEastPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationEntityLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationEntityLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -9,8 +18,10 @@
         <attribute name="locationEntityNorthPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationEntitySouthPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="locationEntityWestPoint" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationSelectedDate" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
         <element name="LocationEntity" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="LocationSelectedEntity" positionX="-45" positionY="63" width="128" height="165"/>
     </elements>
 </model>

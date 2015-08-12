@@ -10,7 +10,6 @@
 		798C7B7D1B7A6EAD0010C02A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B7C1B7A6EAD0010C02A /* main.m */; };
 		798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */; };
 		798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B821B7A6EAD0010C02A /* ViewController.m */; };
-		798C7B861B7A6EAD0010C02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B841B7A6EAD0010C02A /* Main.storyboard */; };
 		798C7B881B7A6EAD0010C02A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B871B7A6EAD0010C02A /* Images.xcassets */; };
 		798C7B8B1B7A6EAD0010C02A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7B891B7A6EAD0010C02A /* LaunchScreen.xib */; };
 		798C7B971B7A6EAD0010C02A /* WeatherTalentoMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7B961B7A6EAD0010C02A /* WeatherTalentoMobileTests.m */; };
@@ -26,7 +25,10 @@
 		798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BCC1B7A90340010C02A /* SearchLocationInteractor.m */; };
 		798C7BD01B7A90FB0010C02A /* AverageTemperatureInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */; };
 		798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */; };
-		798C7BD61B7A97030010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD51B7A97030010C02A /* LocationEntity.m */; };
+		798C7BDA1B7A9D850010C02A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BD91B7A9D850010C02A /* SearchViewController.m */; };
+		798C7BDD1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BDC1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m */; };
+		798C7BF81B7B1C830010C02A /* LocationSelectedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BF71B7B1C830010C02A /* LocationSelectedEntity.m */; };
+		798C7BFB1B7B1C830010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BFA1B7B1C830010C02A /* LocationEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,6 @@
 		798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		798C7B811B7A6EAD0010C02A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		798C7B821B7A6EAD0010C02A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		798C7B851B7A6EAD0010C02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		798C7B871B7A6EAD0010C02A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		798C7B8A1B7A6EAD0010C02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		798C7B901B7A6EAD0010C02A /* WeatherTalentoMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTalentoMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,8 +78,14 @@
 		798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AverageTemperatureInteractor.m; path = "Use Cases/AverageTemperatureInteractor.m"; sourceTree = "<group>"; };
 		798C7BD11B7A93DB0010C02A /* NSManagedObject+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Weather.h"; path = "Model/NSManagedObject+Weather.h"; sourceTree = "<group>"; };
 		798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Weather.m"; path = "Model/NSManagedObject+Weather.m"; sourceTree = "<group>"; };
-		798C7BD41B7A97030010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
-		798C7BD51B7A97030010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
+		798C7BD81B7A9D850010C02A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		798C7BD91B7A9D850010C02A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		798C7BDB1B7B15B50010C02A /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+ActiveRecord.h"; path = "Model/NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
+		798C7BDC1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+ActiveRecord.m"; path = "Model/NSManagedObject+ActiveRecord.m"; sourceTree = "<group>"; };
+		798C7BF61B7B1C830010C02A /* LocationSelectedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSelectedEntity.h; path = Model/LocationSelectedEntity.h; sourceTree = "<group>"; };
+		798C7BF71B7B1C830010C02A /* LocationSelectedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSelectedEntity.m; path = Model/LocationSelectedEntity.m; sourceTree = "<group>"; };
+		798C7BF91B7B1C830010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
+		798C7BFA1B7B1C830010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +131,8 @@
 				798C7B7F1B7A6EAD0010C02A /* AppDelegate.m */,
 				798C7B811B7A6EAD0010C02A /* ViewController.h */,
 				798C7B821B7A6EAD0010C02A /* ViewController.m */,
-				798C7B841B7A6EAD0010C02A /* Main.storyboard */,
+				798C7BD81B7A9D850010C02A /* SearchViewController.h */,
+				798C7BD91B7A9D850010C02A /* SearchViewController.m */,
 				798C7BB31B7A7A130010C02A /* Model */,
 				798C7BA11B7A71560010C02A /* Use Cases */,
 				798C7BA01B7A71470010C02A /* Providers */,
@@ -231,8 +239,10 @@
 		798C7BC61B7A8B670010C02A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				798C7BD41B7A97030010C02A /* LocationEntity.h */,
-				798C7BD51B7A97030010C02A /* LocationEntity.m */,
+				798C7BF91B7B1C830010C02A /* LocationEntity.h */,
+				798C7BFA1B7B1C830010C02A /* LocationEntity.m */,
+				798C7BF61B7B1C830010C02A /* LocationSelectedEntity.h */,
+				798C7BF71B7B1C830010C02A /* LocationSelectedEntity.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -244,6 +254,8 @@
 				798C7BC91B7A8C960010C02A /* LocationEntity+Builder.m */,
 				798C7BD11B7A93DB0010C02A /* NSManagedObject+Weather.h */,
 				798C7BD21B7A93DB0010C02A /* NSManagedObject+Weather.m */,
+				798C7BDB1B7B15B50010C02A /* NSManagedObject+ActiveRecord.h */,
+				798C7BDC1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -328,7 +340,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798C7B861B7A6EAD0010C02A /* Main.storyboard in Resources */,
 				798C7B8B1B7A6EAD0010C02A /* LaunchScreen.xib in Resources */,
 				798C7B881B7A6EAD0010C02A /* Images.xcassets in Resources */,
 			);
@@ -348,11 +359,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798C7BFB1B7B1C830010C02A /* LocationEntity.m in Sources */,
 				798C7BAF1B7A76700010C02A /* LocationsProvider.m in Sources */,
-				798C7BD61B7A97030010C02A /* LocationEntity.m in Sources */,
+				798C7BF81B7B1C830010C02A /* LocationSelectedEntity.m in Sources */,
 				798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */,
 				798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */,
 				798C7BA91B7A73640010C02A /* RequestManagerFactory.m in Sources */,
+				798C7BDA1B7A9D850010C02A /* SearchViewController.m in Sources */,
 				798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */,
 				798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */,
 				798C7BAC1B7A73AD0010C02A /* HTTPRequestManager.m in Sources */,
@@ -361,6 +374,7 @@
 				798C7BB21B7A78770010C02A /* HTTPSessionManager.m in Sources */,
 				798C7BD01B7A90FB0010C02A /* AverageTemperatureInteractor.m in Sources */,
 				798C7BCA1B7A8C960010C02A /* LocationEntity+Builder.m in Sources */,
+				798C7BDD1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m in Sources */,
 				798C7BBD1B7A89C00010C02A /* Model.xcdatamodeld in Sources */,
 				798C7BA51B7A71BE0010C02A /* BaseProvider.m in Sources */,
 				798C7BC31B7A8B410010C02A /* CoreDataStack.m in Sources */,
@@ -386,14 +400,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		798C7B841B7A6EAD0010C02A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				798C7B851B7A6EAD0010C02A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		798C7B891B7A6EAD0010C02A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

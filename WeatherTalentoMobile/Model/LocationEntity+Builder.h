@@ -10,6 +10,6 @@
 
 @interface LocationEntity (Builder)
 
-+ (instancetype)parseLocationByDictionary:(NSDictionary *)data inManageObjectContext:(NSManagedObjectContext *)context;
++ (instancetype)parseLocationByDictionary:(NSDictionary *)data queryName:(NSString *)queryName inManageObjectContext:(NSManagedObjectContext *)context;
 
 @end

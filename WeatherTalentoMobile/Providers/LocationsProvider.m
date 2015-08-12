@@ -9,22 +9,25 @@
 #import "LocationsProvider.h"
 #import "LocationEntity+Builder.h"
 #import "NSManagedObject+Weather.h"
+#import "NSManagedObject+ActiveRecord.h"
+#import "LocationSelectedEntity.h"
+#import "LocationEntity.h"
 
 @implementation LocationsProvider
 
 - (void)searchLocationByName:(NSString *)locationName withCompletion:(void(^)(NSArray *locations, NSError *error))completion {
     NSString *path = @"http://api.geonames.org/searchJSON";
-    NSDictionary *params = @{
-                             @"q": locationName,
-                             @"maxRows": @"20",
-                             @"startRow": @"0",
-                             @"lang": @"en",
-                             @"isNameRequired": @"true",
-                             @"style": @"FULL",
-                             @"username": @"ilgeonamessample"
-                             };
+    NSDictionary *param = @{
+                            @"q": locationName,
+                            @"maxRows": @"20",
+                            @"startRow": @"0",
+                            @"lang": @"en",
+                            @"isNameRequired": @"true",
+                            @"style": @"FULL",
+                            @"username": @"ilgeonamessample"
+                            };
     
-    [self.requestManager GET:path parameters:params completion:^(NSData *responseObject) {
+    [self.requestManager GET:path parameters:param completion:^(NSData *responseObject) {
         __weak typeof(self) weakSelf = self;
         [self.writeManagedObjectContext performBlock:^{
             __strong typeof(weakSelf) self = weakSelf;
@@ -35,9 +38,13 @@
                     completion(nil, errorJSON);
                 }
             }
+            // Delete old data
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", @"locationEntityQuery", locationName];
+            [LocationEntity ar_deleteAllMatchingPredicate:predicate inContext:self.writeManagedObjectContext];
+            
             NSMutableArray *locationsCache = [NSMutableArray array];
             for (NSDictionary *geoname in responseDictionary[@"geonames"]) {
-                LocationEntity *locationEntity = [LocationEntity parseLocationByDictionary:geoname inManageObjectContext:self.writeManagedObjectContext];
+                LocationEntity *locationEntity = [LocationEntity parseLocationByDictionary:geoname queryName:locationName inManageObjectContext:self.writeManagedObjectContext];
                 [locationsCache addObject:locationEntity];
             }
             NSError *coreDataError;
@@ -55,11 +62,27 @@
                 });
             }
         }];
-
+        
     } error:^(id responseObject, NSError *error) {
         if (completion) {
             completion(nil, error);
         }
+    }];
+}
+
+- (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(LocationSelectedEntity *locationSelectedEntity, NSError *error))completion {
+    
+    [self.writeManagedObjectContext performBlock:^{
+        LocationSelectedEntity *locationSelected = [LocationSelectedEntity ar_createEntityInContext:self.writeManagedObjectContext];
+        locationSelected.locationEntityName = locationEntity.locationEntityName;
+        locationSelected.locationEntityEastPoint = locationEntity.locationEntityEastPoint;
+        locationSelected.locationEntityLatitude = locationEntity.locationEntityLatitude;
+        locationSelected.locationEntityLongitude = locationEntity.locationEntityLongitude;
+        locationSelected.locationEntityNorthPoint = locationEntity.locationEntityNorthPoint;
+        locationSelected.locationEntitySouthPoint = locationEntity.locationEntitySouthPoint;
+        locationSelected.locationEntityWestPoint = locationEntity.locationEntityWestPoint;
+        locationSelected.locationSelectedDate = [NSDate date];
+
     }];
 }
 

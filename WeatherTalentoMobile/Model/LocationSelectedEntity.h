@@ -1,5 +1,5 @@
 //
-//  LocationEntity.h
+//  LocationSelectedEntity.h
 //  WeatherTalentoMobile
 //
 //  Created by ANTONIO JIMÉNEZ MARTÍNEZ on 12/08/15.
@@ -10,15 +10,15 @@
 #import <CoreData/CoreData.h>
 
 
-@interface LocationEntity : NSManagedObject
+@interface LocationSelectedEntity : NSManagedObject
 
-@property (nonatomic, retain) NSString * locationEntityName;
+@property (nonatomic, retain) NSDate * locationSelectedDate;
 @property (nonatomic, retain) NSNumber * locationEntityEastPoint;
-@property (nonatomic, retain) NSNumber * locationEntitySouthPoint;
-@property (nonatomic, retain) NSNumber * locationEntityNorthPoint;
-@property (nonatomic, retain) NSNumber * locationEntityWestPoint;
 @property (nonatomic, retain) NSNumber * locationEntityLatitude;
 @property (nonatomic, retain) NSNumber * locationEntityLongitude;
-@property (nonatomic, retain) NSString * locationEntityQuery;
+@property (nonatomic, retain) NSString * locationEntityName;
+@property (nonatomic, retain) NSNumber * locationEntityNorthPoint;
+@property (nonatomic, retain) NSNumber * locationEntitySouthPoint;
+@property (nonatomic, retain) NSNumber * locationEntityWestPoint;
 
 @end

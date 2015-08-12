@@ -10,7 +10,7 @@
 
 @implementation LocationEntity (Builder)
 
-+ (instancetype)parseLocationByDictionary:(NSDictionary *)data inManageObjectContext:(NSManagedObjectContext *)context {
++ (instancetype)parseLocationByDictionary:(NSDictionary *)data queryName:(NSString *)queryName inManageObjectContext:(NSManagedObjectContext *)context {
     LocationEntity *locationEntity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class]) inManagedObjectContext:context];
     locationEntity.locationEntityName = objectFromDictionaryValue(data[@"name"]);
     locationEntity.locationEntityEastPoint = @([objectFromDictionaryValue(data[@"bbox"][@"east"]) doubleValue]);
@@ -19,6 +19,7 @@
     locationEntity.locationEntityWestPoint = @([objectFromDictionaryValue(data[@"bbox"][@"west"]) doubleValue]);
     locationEntity.locationEntityLongitude = @([objectFromDictionaryValue(data[@"lng"]) doubleValue]);
     locationEntity.locationEntityLatitude = @([objectFromDictionaryValue(data[@"lat"]) doubleValue]);
+    locationEntity.locationEntityQuery = queryName;
 
     return locationEntity;
 }
