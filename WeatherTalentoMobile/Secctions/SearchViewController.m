@@ -14,6 +14,14 @@
 
 @implementation SearchViewController
 
+- (instancetype)init {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        self.title = @"Buscar Localidades";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }

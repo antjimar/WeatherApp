@@ -10,6 +10,7 @@
 #import "CoreDataStack.h"
 #import "LocationSelectedEntity.h"
 #import "TemperatureDetailViewController.h"
+#import "SearchViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,6 +35,10 @@
     [super viewDidLoad];
     [self configureTableView];
     [self configureNavigationBar];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -87,7 +92,14 @@
     self.tableView.dataSource = self;
 }
 - (void)configureNavigationBar {
-#warning Add search button
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearchViewController)];
+    [self.navigationItem setRightBarButtonItem:searchButton];
+}
+
+#pragma mark - Actions Methods
+- (void)showSearchViewController {
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:searchViewController animated:YES];
 }
 
 #pragma mark - Getters
