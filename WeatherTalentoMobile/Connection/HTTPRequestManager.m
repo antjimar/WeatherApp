@@ -18,6 +18,7 @@
 #pragma mark - HTTP Methods
 - (void)GET:(NSString *)strinURL parameters:(NSDictionary *)parameters completion:(void (^)(id responseObject))successBlock error:(void (^)(id, NSError *error))errorBlock {
     [self showNetworkActivityIndicator];
+    NSLog(@"Petición tipo GET con parámetros: %@", parameters);
     
     NSURL *url = [NSURL URLWithString:strinURL];
     url = [self NSURL:url byAppendingQueryParameters:parameters];
@@ -43,6 +44,8 @@
                 errorBlock(nil, error);
             }
         }
+        NSDictionary *reponseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSLog(@"Datos de respuesta: %@", reponseDictionary);
     }];
     [task resume];
 }
