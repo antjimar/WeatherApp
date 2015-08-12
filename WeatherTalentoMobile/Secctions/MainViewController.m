@@ -12,6 +12,8 @@
 #import "TemperatureDetailViewController.h"
 #import "SearchViewController.h"
 
+static NSString * const kCellIdentifier = @"mainCell";
+
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSFetchedResultsController *fetchResultController;
@@ -46,7 +48,7 @@
     return (NSInteger)[[self.fetchResultController.sections objectAtIndex:0] numberOfObjects];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
     return [self configureCell:cell forRowAtIndexPath:indexPath];
 }
 
@@ -90,6 +92,7 @@
 - (void)configureTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
 }
 - (void)configureNavigationBar {
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearchViewController)];

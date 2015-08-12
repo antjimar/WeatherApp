@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultSearchViewController">
             <connections>
+                <outlet property="activityIndicator" destination="ybd-X6-SSW" id="hx3-4Z-C87"/>
+                <outlet property="tableView" destination="67Q-Cv-48I" id="e0j-yn-tYl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67Q-Cv-48I">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ybd-X6-SSW">
+                    <rect key="frame" x="281.5" y="281.5" width="37" height="37"/>
+                    <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="67Q-Cv-48I" secondAttribute="bottom" id="0cI-Gi-Lh7"/>
+                <constraint firstItem="67Q-Cv-48I" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Bqc-u9-GMS"/>
+                <constraint firstAttribute="centerX" secondItem="ybd-X6-SSW" secondAttribute="centerX" id="UvL-zC-a6S"/>
+                <constraint firstAttribute="centerY" secondItem="ybd-X6-SSW" secondAttribute="centerY" id="g11-PD-VDs"/>
+                <constraint firstItem="67Q-Cv-48I" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="irE-iW-zYF"/>
+                <constraint firstAttribute="trailing" secondItem="67Q-Cv-48I" secondAttribute="trailing" id="l9u-Gs-fw8"/>
+            </constraints>
         </view>
     </objects>
 </document>

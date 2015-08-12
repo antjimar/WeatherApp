@@ -10,4 +10,6 @@
 
 @interface ResultSearchViewController : UIViewController
 
+- (instancetype)initWithSearchQuery:(NSString *)searchQuery;
+
 @end
