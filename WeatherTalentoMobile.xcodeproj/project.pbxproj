@@ -36,6 +36,7 @@
 		798C7C3A1B7BB0BF0010C02A /* ResultSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7C381B7BB0BF0010C02A /* ResultSearchViewController.xib */; };
 		798C7C3E1B7BB0E20010C02A /* TemperatureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7C3C1B7BB0E20010C02A /* TemperatureDetailViewController.m */; };
 		798C7C3F1B7BB0E20010C02A /* TemperatureDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798C7C3D1B7BB0E20010C02A /* TemperatureDetailViewController.xib */; };
+		798C7C451B7BE2250010C02A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798C7C441B7BE2250010C02A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		798C7C3B1B7BB0E20010C02A /* TemperatureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureDetailViewController.h; path = Secctions/TemperatureDetailViewController.h; sourceTree = "<group>"; };
 		798C7C3C1B7BB0E20010C02A /* TemperatureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureDetailViewController.m; path = Secctions/TemperatureDetailViewController.m; sourceTree = "<group>"; };
 		798C7C3D1B7BB0E20010C02A /* TemperatureDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TemperatureDetailViewController.xib; path = Secctions/TemperatureDetailViewController.xib; sourceTree = "<group>"; };
+		798C7C441B7BE2250010C02A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798C7C451B7BE2250010C02A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +129,7 @@
 		798C7B6E1B7A6EAD0010C02A = {
 			isa = PBXGroup;
 			children = (
+				798C7C441B7BE2250010C02A /* MapKit.framework */,
 				798C7B791B7A6EAD0010C02A /* WeatherTalentoMobile */,
 				798C7B931B7A6EAD0010C02A /* WeatherTalentoMobileTests */,
 				798C7B781B7A6EAD0010C02A /* Products */,
@@ -344,6 +348,11 @@
 				TargetAttributes = {
 					798C7B761B7A6EAD0010C02A = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					798C7B8F1B7A6EAD0010C02A = {
 						CreatedOnToolsVersion = 6.4;

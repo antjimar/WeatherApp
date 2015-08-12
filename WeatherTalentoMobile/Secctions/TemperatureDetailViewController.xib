@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemperatureDetailViewController">
             <connections>
                 <outlet property="lineWithConstraint" destination="o3p-9O-iMs" id="vfb-Sr-xzA"/>
+                <outlet property="locationMap" destination="LJa-KJ-xI8" id="1aP-my-E8C"/>
                 <outlet property="locationNameLabel" destination="wFY-5m-u6L" id="DwZ-kd-ydn"/>
                 <outlet property="temperatureLabel" destination="ypl-R1-vna" id="xNh-zi-NUw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,25 +30,25 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura para:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1If-Pr-XKW">
-                    <rect key="frame" x="230" y="114" width="140" height="20.5"/>
+                    <rect key="frame" x="230" y="80" width="140" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MADRID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFY-5m-u6L">
-                    <rect key="frame" x="266" y="154" width="68" height="20.5"/>
+                    <rect key="frame" x="266" y="120" width="68" height="20.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.6 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-R1-vna">
-                    <rect key="frame" x="229" y="218" width="143" height="52.5"/>
+                    <rect key="frame" x="229" y="184" width="143" height="52.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="44"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UM2-W2-fZn">
-                    <rect key="frame" x="200" y="290" width="200" height="13"/>
+                    <rect key="frame" x="200" y="256" width="200" height="13"/>
                     <color key="backgroundColor" red="0.57487401780000003" green="0.82877976659999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="13" id="001-eL-F00"/>
@@ -55,26 +56,31 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-20 ºC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LV8-8g-0Qt">
-                    <rect key="frame" x="185" y="312" width="33.5" height="13.5"/>
+                    <rect key="frame" x="185" y="278" width="33.5" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 ºC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Py-Md-nO8">
-                    <rect key="frame" x="386" y="312" width="29" height="13.5"/>
+                    <rect key="frame" x="386" y="278" width="29" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LJa-KJ-xI8">
+                    <rect key="frame" x="8" y="310" width="584" height="282"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1If-Pr-XKW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="114" id="0lt-Qv-Oxt"/>
+                <constraint firstItem="1If-Pr-XKW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="0lt-Qv-Oxt"/>
                 <constraint firstItem="wFY-5m-u6L" firstAttribute="top" secondItem="1If-Pr-XKW" secondAttribute="bottom" constant="20" id="5GV-t7-JdJ"/>
+                <constraint firstAttribute="centerX" secondItem="LJa-KJ-xI8" secondAttribute="centerX" id="97E-jr-ow8"/>
                 <constraint firstItem="UM2-W2-fZn" firstAttribute="leading" secondItem="1If-Pr-XKW" secondAttribute="leading" constant="-30" id="LgO-6F-9qU"/>
                 <constraint firstItem="ypl-R1-vna" firstAttribute="top" secondItem="wFY-5m-u6L" secondAttribute="bottom" constant="44" id="M85-iu-yqc"/>
                 <constraint firstAttribute="centerX" secondItem="ypl-R1-vna" secondAttribute="centerX" id="P4b-DJ-6Cv"/>
                 <constraint firstItem="UM2-W2-fZn" firstAttribute="top" secondItem="ypl-R1-vna" secondAttribute="bottom" constant="20" id="Ql0-Dc-lu4"/>
+                <constraint firstAttribute="trailing" secondItem="LJa-KJ-xI8" secondAttribute="trailing" constant="8" id="Rh6-rE-jiB"/>
                 <constraint firstItem="1Py-Md-nO8" firstAttribute="top" secondItem="UM2-W2-fZn" secondAttribute="bottom" constant="9" id="SNG-lW-5rH"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wFY-5m-u6L" secondAttribute="trailing" constant="8" id="XmH-tl-9tj"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ypl-R1-vna" secondAttribute="trailing" constant="8" id="YVN-b7-V0H"/>
@@ -84,7 +90,10 @@
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1If-Pr-XKW" secondAttribute="trailing" constant="8" id="fmc-CN-oDn"/>
                 <constraint firstItem="UM2-W2-fZn" firstAttribute="leading" secondItem="LV8-8g-0Qt" secondAttribute="leading" constant="15" id="hoS-QZ-OMv"/>
                 <constraint firstItem="LV8-8g-0Qt" firstAttribute="top" secondItem="UM2-W2-fZn" secondAttribute="bottom" constant="9" id="jPe-SK-Cdx"/>
+                <constraint firstItem="LJa-KJ-xI8" firstAttribute="top" secondItem="1Py-Md-nO8" secondAttribute="bottom" constant="18.5" id="jWg-pN-IYq"/>
                 <constraint firstItem="1If-Pr-XKW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="lAL-Rf-mIz"/>
+                <constraint firstItem="LJa-KJ-xI8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="pmP-Rh-ecz"/>
+                <constraint firstAttribute="bottom" secondItem="LJa-KJ-xI8" secondAttribute="bottom" constant="8" id="qVq-ei-5Yl"/>
                 <constraint firstAttribute="trailing" secondItem="r2U-eS-ajg" secondAttribute="trailing" constant="20" id="sjg-ru-xia"/>
                 <constraint firstItem="r2U-eS-ajg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="tWH-If-2Y8"/>
                 <constraint firstAttribute="centerX" secondItem="1If-Pr-XKW" secondAttribute="centerX" id="uwV-Yo-B8j"/>
