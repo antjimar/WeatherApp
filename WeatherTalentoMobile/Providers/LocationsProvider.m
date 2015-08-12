@@ -71,8 +71,9 @@
 }
 
 - (void)saveLocationSelectedWithLocationEntity:(LocationEntity *)locationEntity withCompletion:(void(^)(LocationSelectedEntity *locationSelectedEntity, NSError *error))completion {
-    
+    __weak typeof(self) weakSelf = self;
     [self.writeManagedObjectContext performBlock:^{
+        __strong typeof(weakSelf) self = weakSelf;
         LocationSelectedEntity *locationSelected = [LocationSelectedEntity ar_createEntityInContext:self.writeManagedObjectContext];
         locationSelected.locationEntityName = locationEntity.locationEntityName;
         locationSelected.locationEntityEastPoint = locationEntity.locationEntityEastPoint;
@@ -82,7 +83,20 @@
         locationSelected.locationEntitySouthPoint = locationEntity.locationEntitySouthPoint;
         locationSelected.locationEntityWestPoint = locationEntity.locationEntityWestPoint;
         locationSelected.locationSelectedDate = [NSDate date];
-
+        
+        NSError *coreDataError;
+        [self.writeManagedObjectContext save:&coreDataError];
+        if (coreDataError) {
+            NSLog(@"%@", coreDataError);
+        }
+        
+        if (completion) {
+            LocationSelectedEntity *mainThreadLocationSelected = [locationSelected objectInManagedObjectContext:self.managedObjectContext];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(mainThreadLocationSelected, nil);
+            });
+        }
+        
     }];
 }
 

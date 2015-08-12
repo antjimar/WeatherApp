@@ -29,6 +29,7 @@
 		798C7BDD1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BDC1B7B15B50010C02A /* NSManagedObject+ActiveRecord.m */; };
 		798C7BF81B7B1C830010C02A /* LocationSelectedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BF71B7B1C830010C02A /* LocationSelectedEntity.m */; };
 		798C7BFB1B7B1C830010C02A /* LocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BFA1B7B1C830010C02A /* LocationEntity.m */; };
+		798C7BFE1B7BAEA30010C02A /* SaveLocationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 798C7BFD1B7BAEA30010C02A /* SaveLocationInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		798C7BF71B7B1C830010C02A /* LocationSelectedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSelectedEntity.m; path = Model/LocationSelectedEntity.m; sourceTree = "<group>"; };
 		798C7BF91B7B1C830010C02A /* LocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationEntity.h; path = Model/LocationEntity.h; sourceTree = "<group>"; };
 		798C7BFA1B7B1C830010C02A /* LocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationEntity.m; path = Model/LocationEntity.m; sourceTree = "<group>"; };
+		798C7BFC1B7BAEA30010C02A /* SaveLocationInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaveLocationInteractor.h; path = "Use Cases/SaveLocationInteractor.h"; sourceTree = "<group>"; };
+		798C7BFD1B7BAEA30010C02A /* SaveLocationInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaveLocationInteractor.m; path = "Use Cases/SaveLocationInteractor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,8 @@
 				798C7BCC1B7A90340010C02A /* SearchLocationInteractor.m */,
 				798C7BCE1B7A90FB0010C02A /* AverageTemperatureInteractor.h */,
 				798C7BCF1B7A90FB0010C02A /* AverageTemperatureInteractor.m */,
+				798C7BFC1B7BAEA30010C02A /* SaveLocationInteractor.h */,
+				798C7BFD1B7BAEA30010C02A /* SaveLocationInteractor.m */,
 			);
 			name = "Use Cases";
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				798C7BCD1B7A90340010C02A /* SearchLocationInteractor.m in Sources */,
 				798C7B831B7A6EAD0010C02A /* ViewController.m in Sources */,
 				798C7BA91B7A73640010C02A /* RequestManagerFactory.m in Sources */,
+				798C7BFE1B7BAEA30010C02A /* SaveLocationInteractor.m in Sources */,
 				798C7BDA1B7A9D850010C02A /* SearchViewController.m in Sources */,
 				798C7BD31B7A93DB0010C02A /* NSManagedObject+Weather.m in Sources */,
 				798C7B801B7A6EAD0010C02A /* AppDelegate.m in Sources */,
