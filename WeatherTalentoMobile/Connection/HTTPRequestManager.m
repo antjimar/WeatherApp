@@ -18,7 +18,6 @@
 #pragma mark - HTTP Methods
 - (void)GET:(NSString *)strinURL parameters:(NSDictionary *)parameters completion:(void (^)(id responseObject))successBlock error:(void (^)(id, NSError *error))errorBlock {
     [self showNetworkActivityIndicator];
-    NSLog(@"Petición tipo GET con parámetros: %@", parameters);
     
     NSURL *url = [NSURL URLWithString:strinURL];
     url = [self NSURL:url byAppendingQueryParameters:parameters];
@@ -44,8 +43,6 @@
                 errorBlock(nil, error);
             }
         }
-        NSDictionary *reponseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        NSLog(@"Datos de respuesta: %@", reponseDictionary);
     }];
     [task resume];
 }
@@ -67,8 +64,8 @@
     NSMutableArray* parts = [NSMutableArray array];
     [queryParameters enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
         NSString *part = [NSString stringWithFormat: @"%@=%@",
-                          [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
-                          [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+                          [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]],
+                          [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]
                           ];
         [parts addObject:part];
     }];

@@ -33,8 +33,12 @@
         ResultSearchViewController *resultSearchViewController = [[ResultSearchViewController alloc] initWithSearchQuery:self.searchTextField.text];
         [self.navigationController pushViewController:resultSearchViewController animated:YES];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Debes introducir una localidad" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERROR" message:@"Debes introducir una localidad" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
